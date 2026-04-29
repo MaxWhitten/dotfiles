@@ -1,0 +1,51 @@
+# Whitelist mode: ignore everything by default, then opt specific dotfiles back in.
+/*
+!/.gitignore
+
+# Root-level config files
+!/dolphinrc
+!/settings.ini
+!/starship.toml
+!/user-dirs.dirs
+!/user-dirs.locale
+
+# Small config-only directories
+!/ghostty/
+!/hypr/
+!/mako/
+!/neofetch/
+!/waybar/
+!/zed/
+
+# Git config helpers
+!/git/
+
+# Config directories with mixed/generated contents
+!/fish/
+/fish/*
+!/fish/config.fish
+!/fish/conf.d/
+/fish/conf.d/*
+!/fish/conf.d/*.fish
+!/fish/fish_plugins
+!/fish/functions/
+/fish/functions/*
+!/fish/functions/*.fish
+!/fish/theme.fish
+
+!/gtk-3.0/
+/gtk-3.0/*
+!/gtk-3.0/gtk.css
+!/gtk-3.0/settings.ini
+
+!/gtk-4.0/
+/gtk-4.0/*
+!/gtk-4.0/assets/
+!/gtk-4.0/assets/**
+!/gtk-4.0/gtk-dark.css
+!/gtk-4.0/gtk.css
+!/gtk-4.0/settings.ini
+
+!/lyrics-in-terminal/
+/lyrics-in-terminal/*
+!/lyrics-in-terminal/lyrics.cfg

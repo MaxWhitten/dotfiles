@@ -1,0 +1,41 @@
+format = '''
+$hostname$custom$directory$character
+'''
+
+palette = 'colors'
+
+[palettes.colors]
+mustard = '#af8700' # example
+color1 = '#81d5cc'
+color2 = '#003733'
+color3 = '#bec9c6'
+color4 = '#1a2120'
+color5 = '#003733'
+color6 = '#0e1514'
+color7 = '#0e1514'
+color8 = '#81d5cc'
+color9 = '#afc9e7'
+color10 = '#a02939'
+
+# Prompt symbols
+[character]
+success_symbol = "[🞈](color9 bold)"
+error_symbol = "[🞈](@{error})"
+vicmd_symbol = "[🞈](#f9e2af)"
+
+[directory]
+format = "(fg:color1 bg:color4)[$path](fg:color3 bg:color4)[ ](fg:color4)"
+
+[custom.username_kali]
+command = "whoami"
+when = ''' test "$CONTAINER_ID" = "kali" '''
+format = '[](fg:color10 bg:color4)[$output](fg:color3 bg:color10)[ ](fg:color10 bg:color4)'
+
+[custom.username_normal]
+command = "whoami"
+when = ''' test "$CONTAINER_ID" != "kali" '''
+format = '[](fg:color1 bg:color4)[$output](fg:color4 bg:color1)[ ](fg:color1 bg:color4)'
+
+[hostname]
+ssh_only = true
+format = "[](fg:color4)(fg:color1 bg:color4)[$hostname ](fg:color3 bg:color4)"

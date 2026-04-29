@@ -1,0 +1,51 @@
+font-family = "source-code-pro"
+font-size = 10
+window-decoration = true
+command = fish
+window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 10
+font-style-bold = true
+font-style = Boldy
+keybind = ctrl+shift+w=new_split:up
+keybind = ctrl+shift+s=new_split:down
+keybind = ctrl+shift+d=new_split:right
+keybind = ctrl+shift+a=new_split:left
+keybind = ctrl+shift+n=new_tab
+keybind = ctrl+alt+n=new_window
+command = TERM=xterm-256color /usr/bin/fish
+background-opacity = 0.5
+background-blur = true
+
+# Nightfox colors for Ghostty
+## name: carbonfox
+## upstream: https://github.com/edeneast/nightfox.nvim/raw/main/extra/carbonfox/carbonfox.ghostty
+
+background = #161616
+foreground = #f2f4f8
+selection-background = #2a2a2a
+selection-foreground = #f2f4f8
+cursor-color = #f2f4f8
+
+# normal
+palette = 0=#282828
+palette = 1=#ee5396
+palette = 2=#25be6a
+palette = 3=#08bdba
+palette = 4=#78a9ff
+palette = 5=#be95ff
+palette = 6=#33b1ff
+palette = 7=#dfdfe0
+
+# bright
+palette = 8=#484848
+palette = 9=#f16da6
+palette = 10=#46c880
+palette = 11=#2dc7c4
+palette = 12=#8cb6ff
+palette = 13=#c8a5ff
+palette = 14=#52bdff
+palette = 15=#e4e4e5
+
+# extended colors
+palette = 16=#3ddbd9
