@@ -17,6 +17,7 @@ alias cls='clear'
 alias p1ng='ping -c 4 1.1.1.1'
 alias chmac='sudo ip link set dev wlan0 down; and sudo macchanger -r wlan0; and sudo ip link set dev wlan0 up'
 alias notes='nano -0 notes'
+alias hidle='~/.config/hypr/toggle-hypridle'
 
 starship init fish | source
 

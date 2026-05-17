@@ -1,0 +1,20 @@
+#!/usr/bin/env fish
+
+set pid (pgrep -x hypridle)
+
+if test -z "$pid"
+    hypridle &
+    disown
+    notify-send "Hypridle" "started"
+    exit
+end
+
+set state (ps -o stat= -p $pid | string trim)
+
+if string match -q "T*" $state
+    pkill -CONT hypridle
+    notify-send "Hypridle" "resumed"
+else
+    pkill -STOP hypridle
+    notify-send "Hypridle" "paused"
+end
